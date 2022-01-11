@@ -109,7 +109,7 @@ Recaptcha
 ![erd](public/documentation/erd.jpg?raw=true)
 
 
-&copy; 2020 James Martinez, Ryder McDowell. All rights reserved.
+&copy; 2020 Joe Bananarama, James Martinez, Ryder McDowell. All rights reserved.
 
 
 asdf asdf
