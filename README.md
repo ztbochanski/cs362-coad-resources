@@ -6,6 +6,7 @@ made available by members of Community Organizations Active in Disaster.
 
 ## Development
 
+TODO: Fix this to include forking instructions, etc.
 Clone the repository:
 
 ```
