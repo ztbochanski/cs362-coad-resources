@@ -35,7 +35,10 @@ If you want, you can create some seed data in the database:
 
 ```
 rails db:seed
+
 ```
+Before starting the app you have to setup the .env variables. To do this cp the .env.example file and modify the parts where you set the admin email and the password.
+Once saving drop the database (rails db:drop) and restup the database (rails db:setup) 
 
 Start the app:
 Through the browser go to localhost:3000 
