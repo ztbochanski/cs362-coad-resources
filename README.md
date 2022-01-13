@@ -9,8 +9,9 @@ made available by members of Community Organizations Active in Disaster.
 TODO: Fix this to include forking instructions, etc.
 Clone the repository:
 
+Fork the repository from  ybakos/cs362-coad-resources
 ```
-git clone git@github.com:osu-cascades/coad-resources.git
+use git clone git@github.com:osu-cascades/coad-resources.git
 ```
 
 This is a Rails application that uses SQLite in development and PostgreSQL in production.
