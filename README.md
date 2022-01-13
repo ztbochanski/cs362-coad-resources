@@ -35,7 +35,7 @@ rails db:seed
 ```
 
 Start the app:
-
+Through the browser go to localhost:3000 
 ```
 rails server
 ```
