@@ -22,6 +22,8 @@ Install the dependencies:
 gem install bundler
 bundle install
 ```
+If you have issues installing these it might be becuase of your ruby version. You can check the ruby version in the command line with ruby -v
+If you are using a mac/xcode you might have the ruby version that comes with xcode that is known to be suspicious. Use the commands brew install rbenv ruby-build, rbenv install 2.7.5, rbenv global 2.7.5 to install ruby 2.7.5
 
 Next, set up the database:
 
