@@ -8,9 +8,8 @@ made available by members of Community Organizations Active in Disaster.
 
 Clone the repository:
 
-Fork the repository from  ybakos/cs362-coad-resources
 ```
-use git clone git@github.com:osu-cascades/coad-resources.git
+git clone git@github.com:osu-cascades/coad-resources.git
 ```
 
 This is a Rails application that uses SQLite in development and PostgreSQL in production.
@@ -21,8 +20,6 @@ Install the dependencies:
 gem install bundler
 bundle install
 ```
-If you have issues installing these it might be becuase of your ruby version. You can check the ruby version in the command line with ruby -v
-If you are using a mac/xcode you might have the ruby version that comes with xcode that is known to be suspicious. Use the commands brew install rbenv ruby-build, rbenv install 2.7.5, rbenv global 2.7.5 to install ruby 2.7.5
 
 Next, set up the database:
 
@@ -34,13 +31,10 @@ If you want, you can create some seed data in the database:
 
 ```
 rails db:seed
-
 ```
-Before starting the app you have to setup the .env variables. To do this cp the .env.example file and modify the parts where you set the admin email and the password.
-Once saving drop the database (rails db:drop) and restup the database (rails db:setup) 
 
 Start the app:
-Through the browser go to localhost:3000 
+
 ```
 rails server
 ```
@@ -114,8 +108,10 @@ Recaptcha
 ![erd](public/documentation/erd.jpg?raw=true)
 
 
-&copy; 2020 Lucas Rouchy,Zach Bochanski, Luke Reynolds . All rights reserved.
+&copy; 2020 James Martinez, Ryder McDowell. All rights reserved.
 
 
-asdf asdf
-
+# Steps to get rails to work:
+# Get ruby 2.7.5
+# Bundle install
+# Make sure manifest.js works
