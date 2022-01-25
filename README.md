@@ -10,7 +10,7 @@ Clone the repository:
 
 Fork the repository from  ybakos/cs362-coad-resources
 ```
-use git clone git@github.com:osu-cascades/coad-resources.git
+use git clone git@github.com:ztbochanski/coad-resources.git
 ```
 
 This is a Rails application that uses SQLite in development and PostgreSQL in production.
@@ -116,8 +116,4 @@ Recaptcha
 ![erd](public/documentation/erd.jpg?raw=true)
 
 
-&copy; 2020 Lucas Rouchy,Zach Bochanski, Luke Reynolds . All rights reserved.
-
-
-asdf asdf
-
+&copy; 2020 Lucas Rouchy, Zach Bochanski, Luke Reynolds . All rights reserved.
