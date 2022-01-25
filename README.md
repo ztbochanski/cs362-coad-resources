@@ -9,7 +9,11 @@ made available by members of Community Organizations Active in Disaster.
 Clone the repository:
 
 ```
+
+use git clone git@github.com:ztbochanski/coad-resources.git
+
 git clone git@github.com:osu-cascades/coad-resources.git
+
 ```
 
 This is a Rails application that uses SQLite in development and PostgreSQL in production.
@@ -21,7 +25,9 @@ gem install bundler
 bundle install
 ```
 
+
 Next, set up the database:
+
 
 ```
 rails db:setup
@@ -108,7 +114,8 @@ Recaptcha
 ![erd](public/documentation/erd.jpg?raw=true)
 
 
-&copy; 2020 James Martinez, Ryder McDowell. All rights reserved.
+
+&copy; 2020 Lucas Rouchy, Zach Bochanski, Luke Reynolds . All rights reserved.
 
 
 # Steps to get rails to work:

@@ -176,6 +176,7 @@ GEM
     msgpack (1.4.2)
     nenv (0.3.0)
     nio4r (2.5.8)
+    nokogiri (1.13.1-x86_64-darwin)
     nokogiri (1.13.1)
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
@@ -324,6 +325,9 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  x86_64-darwin-20
+  x86_64-darwin-21
+
   ruby
   x86_64-linux
 
@@ -366,4 +370,4 @@ DEPENDENCIES
   webdrivers (~> 3.0)
 
 BUNDLED WITH
-   2.3.4
+   2.3.5
