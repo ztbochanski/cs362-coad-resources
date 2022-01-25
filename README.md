@@ -22,7 +22,9 @@ gem install bundler
 bundle install
 ```
 
+
 Next, set up the database:
+
 
 ```
 rails db:setup

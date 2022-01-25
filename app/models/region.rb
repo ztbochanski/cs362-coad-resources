@@ -15,3 +15,7 @@ class Region < ApplicationRecord
   end
 
 end
+
+region = Region.new(name: nil)
+region.valid?
+
