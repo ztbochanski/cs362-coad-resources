@@ -2,9 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Region, type: :model do
     let(:region) { Region.new(name: 'Fake Region')}
-    
 
-    it "exitst" do
+    it "exists" do
         Region.new
     end
 
@@ -13,6 +12,8 @@ RSpec.describe Region, type: :model do
             region = Region.new
             expect(region).to respond_to(:name)
         end
+    end
+
     describe "#to_s" do
         it "returns the name" do
             name = 'Mt.Hood'
@@ -22,10 +23,9 @@ RSpec.describe Region, type: :model do
     end
 
     describe "::unspecified" do
-        
         it "returns a region with the name 'Unspecified" do
             region = Region.unspecified
-            expect(region.name).to eq('Unspeecified')
+            expect(region.name).to eq('Unspecified')
         end
     end
 
@@ -35,10 +35,11 @@ RSpec.describe Region, type: :model do
         end
     end 
      
-
     describe "validations" do 
         it "cannot have a blank name" do
             region = Region.new(name: 'Fake Region')
             expect(region).to be_valid
         end
+    end
+
 end
