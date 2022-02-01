@@ -31,14 +31,16 @@ RSpec.describe ResourceCategory, type: :model do
 
     describe "#activate" do
       it "updates the scope to be active" do
-        resourcecategory = ResourceCategory.new(active: true)
+        resourcecategory = ResourceCategory.new(active: false)
+        resourcecategory.activate()
         expect(resourcecategory.active).to eq(true)
       end
     end
 
     describe "#deactivate" do
       it "updates the scope to be deactivated" do
-        resourcecategory = ResourceCategory.new(active: false)
+        resourcecategory = ResourceCategory.new(active: true)
+        resourcecategory.deactivate()
         expect(resourcecategory.active).to eq(false)
       end
     end
