@@ -3,7 +3,7 @@ FactoryBot.define do
       email { "fake@fake.com" }
       name { "fakename" }
       phone { "fakephone" }
-      status { :approved }
+      status { :submitted }
       primary_name { "fake primary name" }
       secondary_name { "fake secondary name" }
       secondary_phone { "fake secondary phone" }
