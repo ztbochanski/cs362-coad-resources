@@ -42,7 +42,31 @@ RSpec.describe Organization, type: :model do
       organization = build(:organization, secondary_phone: nil)
       expect(organization).to be_invalid
     end
-    
+
   end
+
+  describe "behaviors" do
+    
+    describe "#approve" do
+      it "is approved" do
+        expect(organization.approve).to eq(:approved)
+      end
+    end
+
+    describe "#reject" do
+      it "is approved" do
+        expect(organization.reject).to eq(:rejected)
+      end
+    end
+    
+    describe "#to_s" do
+      it "is returns the name" do
+        name = "fake organization"
+        organization = build(:organization, name: name)
+        expect(organization.to_s).to eq(name)
+      end
+    end
+
+  end 
 
 end
