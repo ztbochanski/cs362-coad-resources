@@ -7,8 +7,5 @@ FactoryBot.define do
       primary_name { "fake primary name" }
       secondary_name { "fake secondary name" }
       secondary_phone { "fake secondary phone" }
-      title { "fake title" }
-      description { "fake description" }
-      transportation { :yes }
     end
 end
