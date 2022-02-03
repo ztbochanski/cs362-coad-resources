@@ -58,11 +58,17 @@ RSpec.describe Organization, type: :model do
         expect(organization.reject).to eq(:rejected)
       end
     end
+
+    describe "#set_default_status" do
+      it "it has a status that is rejected" do
+        expect(organization.set_default_status).to eq(1)
+      end
+    end
     
     describe "#to_s" do
       it "is returns the name" do
         name = "fake organization"
-        organization = build(:organization, name: name)
+        organization = build(:organization, status: name)
         expect(organization.to_s).to eq(name)
       end
     end
