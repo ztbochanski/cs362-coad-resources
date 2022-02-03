@@ -19,7 +19,7 @@ RSpec.describe User, type: :model do
   
   describe "#to_s" do
     it "returns the name" do
-      name = 'Mt.Hood'
+      name = 'Joe Mama'
       user = User.new(name: name)
       expect(user.to_s).to eq(name)
     end
@@ -40,8 +40,8 @@ RSpec.describe User, type: :model do
        
   describe "validations" do 
     it "cannot have a blank email" do
-      user = User.new(email: 'Fake User')
-      expect(user).to be_valid
+      user = User.new(email: nil)
+      expect(user).to be_invalid
     end
 
     it "email must be unique" do
@@ -50,7 +50,7 @@ RSpec.describe User, type: :model do
 
     it "email must have at least 1 character" do
       user = User.new(email: '')
-      expect(user).to be_valid
+      expect(user.name).to eq
     end
 
     it "email must match format" do
