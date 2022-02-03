@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe ResourceCategory, type: :model do
     let(:resource) { ResourceCategory.new(name: 'Fake resource category')}
-
+    
+    
     it "exists" do
         ResourceCategory.new
     end
