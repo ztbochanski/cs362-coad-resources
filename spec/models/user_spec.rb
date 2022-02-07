@@ -1,18 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let :user {
-    User.new(email: 'reynollu@oregonstate.edu')
-      role:"bruh"
+  let (:user) { build_stubbed(:user)
   }
   
-  it "exists" do
-  	User.new
-  end
-  
   describe "attributes" do 
-    it "has an email" do
-      user = User.new
+    it "exist" do
       expect(user).to respond_to(:email)
     end
   end
@@ -44,35 +37,4 @@ RSpec.describe User, type: :model do
       expect(user).to be_invalid
     end
 
-    it "email must be unique" do
-      user = User.new(email: 'Fake User')
-    end
-
-    it "email must have at least 1 character" do
-      user = User.new(email: '')
-      expect(user.name).to eq
-    end
-
-    it "email must match format" do
-      user = User.new(email: '')
-      expect(user).to be_valid
-    end
-
-    it "email cannot exceed 255 characters" do
-      user = User.new(email: '')
-      expect(user).to be_valid
-    end
-
-    it "password must have at least 7 characters" do
-      user = User.new(password: '')
-      expect(user).to be_valid
-    end
-
-    it "password cannot exceed 255 characters" do
-      user = User.new(password: '')
-      expect(user).to be_valid
-    end
-
-
-  end
 end
