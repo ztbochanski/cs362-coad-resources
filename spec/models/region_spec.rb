@@ -4,61 +4,42 @@ RSpec.describe Region, type: :model do
     let(:region) { Region.new(name: 'Fake Region')}
 
     it "exists" do
-        Region.new
+      Region.new
     end
 
     describe "attributes" do 
-        it "has a name" do
-            region = Region.new
-            expect(region).to respond_to(:name)
-        end
+      it "has a name" do
+        region = Region.new
+        expect(region).to respond_to(:name)
+      end
     end
 
     describe "#to_s" do
-        it "returns the name" do
-            name = 'Mt.Hood'
-            region = Region.new(name: name)
-            expect(region.to_s).to eq(name)
-        end
+      it "returns the name" do
+        name = 'Mt.Hood'
+        region = Region.new(name: name)
+        expect(region.to_s).to eq(name)
+      end
     end
 
     describe "::unspecified" do
-        it "returns a region with the name 'Unspecified" do
-            region = Region.unspecified
-            expect(region.name).to eq('Unspecified')
-        end
+      it "returns a region with the name 'Unspecified" do
+        region = Region.unspecified
+        expect(region.name).to eq('Unspecified')
+      end
     end
 
     describe "association" do
-        it "has many tickets" do
-            expect(Region.new).to have_many(:tickets)
-        end
+      it "has many tickets" do
+        expect(Region.new).to have_many(:tickets)
+      end
     end 
      
     describe "validations" do 
-        it "cannot have a blank name" do
-            region = Region.new(name: 'Fake Region')
-            expect(region).to be_valid
-        end
+      it "cannot have a blank name" do
+        region = Region.new(name: 'Fake Region')
+        expect(region).to be_valid
+      end
     end
-
-  it "exists" do
-    Region.new
-  end
-
-  describe "attributes" do
-    it "has a name" do
-      region = Region.new
-      expect(region).to respond_to(:name)
-    end
-  end
-
-  describe "#to_s" do
-    it "returns the same" do
-      name = 'Mt. Hood'
-      region = Region.new(name: name)
-      expect(region.to_s).to eq(name)
-    end
-  end
 
 end
