@@ -83,6 +83,16 @@ RSpec.describe Organization, type: :model do
       end
     end
 
+  end
+
+  describe "association" do
+    it "has many tickets" do
+      expect(organization).to have_many(:tickets)
+    end
+
+    it "has many users" do
+      expect(organization).to have_many(:users)
+    end
   end 
 
 end
