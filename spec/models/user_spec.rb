@@ -17,11 +17,7 @@ RSpec.describe User, type: :model do
     end
   end
   
-  describe "association" do
-    it "has many tickets" do
-      expect(User.new).to have_many(:tickets)
-    end
-  end 
+  
        
   describe "validations" do 
     it "cannot have a blank email" do
