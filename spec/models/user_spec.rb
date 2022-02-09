@@ -17,8 +17,6 @@ RSpec.describe User, type: :model do
     end
   end
   
-  
-       
   describe "validations" do 
     it "cannot have a blank email" do
       user = User.new(email: nil)
