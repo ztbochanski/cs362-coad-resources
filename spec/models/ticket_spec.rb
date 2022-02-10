@@ -42,6 +42,15 @@ RSpec.describe Ticket, type: :model do
         resource_category: resource_category,
     )}
 
+    let (:ticket_without_region) { Ticket.create!(
+        closed: true,
+        phone: "1-555-666-2244",
+        name: "fake open ticket with organization",
+        organization: organization,
+        region: region,
+        resource_category: resource_category,
+    )}
+
     describe "scopes" do
         
         it "returns open tickets from database" do
@@ -74,6 +83,11 @@ RSpec.describe Ticket, type: :model do
             expect(results).to_not include(open_ticket_with_organization)
         end
 
+        it "returns a region of the specific id" do
+            results = Ticket.region(region)
+            expect(results).to include(open_ticket)
+            expect(results).to_not include(ticket_without_region)
+        end
 
     end
 
