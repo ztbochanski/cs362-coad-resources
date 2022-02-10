@@ -5,7 +5,16 @@ RSpec.describe Ticket, type: :model do
     let (:region) { create(:region) }
     let (:resource_category) { create(:resource_category) }
     let (:organization) { create(:organization) }
-    let (:ticket) { build(:ticket) }
+    # let (:ticket) { build(:ticket) }
+
+    let (:ticket) { Ticket.new(
+        closed: false,
+        phone: "1-555-666-2244",
+        name: "fake open ticket",
+        organization: nil,
+        region: region,
+        resource_category: resource_category,
+    )}
 
     let (:open_ticket) { Ticket.create!(
         closed: false,
@@ -45,29 +54,44 @@ RSpec.describe Ticket, type: :model do
 
     describe "validations" do
         
-        it "has a name" do
-            expect(ticket).to validate_presence_of(:name)
-            ticket.name = nil
-            expect(ticket).to be_invalid
+        describe "a ticket has the following" do
+            it "has a name" do
+                expect(ticket).to be_valid
+                ticket.name = nil
+                expect(ticket).to be_invalid
+            end
+
+            it "has a phone" do
+                expect(ticket).to be_valid
+                ticket.phone = nil
+                expect(ticket).to be_invalid
+            end
+
+            it "has a region id" do
+                expect(ticket).to be_valid
+                ticket.region_id = nil
+                expect(ticket).to be_invalid
+            end
+
+            it "has a resource category" do
+                expect(ticket).to be_valid
+                ticket.resource_category_id = nil
+                expect(ticket).to be_invalid
+            end
         end
 
-        it "has a phone" do
-            expect(ticket).to validate_presence_of(:phone)
-            ticket.phone = nil
-            expect(ticket).to be_invalid
-        end
+        # describe "a ticket has a name length" do
+        #     it "has a max length" do
+        #         expect(ticket).to validate_length_of(:name)
+        #     end
+        # end
 
-        it "has a region id" do
-            expect(ticket).to validate_presence_of(:region_id)
-            ticket.region_id = nil
-            expect(ticket).to be_invalid
-        end
+        # describe "a ticket has a description length" do
+        #     it "a description has a max length" do
+        #         expect(ticket).to validate_length_of(:description)
+        #     end
+        # end
 
-        it "has a resource category" do
-            expect(ticket).to validate_presence_of(:resource_category_id)
-            ticket.resource_category_id = nil
-            expect(ticket).to be_invalid
-        end
 
     end
 
