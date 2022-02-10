@@ -84,7 +84,7 @@ RSpec.describe Ticket, type: :model do
             it "has a max length" do
                 expect(ticket).to be_valid
                 ticket.name = "a" * 256
-                expect(ticket).to_not be_valid
+                expect(ticket).to be_invalid
             end
         end
 
@@ -92,7 +92,15 @@ RSpec.describe Ticket, type: :model do
             it "a description has a max length" do
                 expect(ticket).to be_valid
                 ticket.description = "a" * 1021
-                expect(ticket).to_not be_valid
+                expect(ticket).to be_invalid
+            end
+        end
+
+        describe "has a phone" do
+            it "has a valid phone number" do
+                expect(ticket).to be_valid
+                ticket.phone = "invalid fake phone"
+                expect(ticket).to be_invalid
             end
         end
 
