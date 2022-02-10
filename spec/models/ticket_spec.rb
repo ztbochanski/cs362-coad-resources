@@ -51,6 +51,12 @@ RSpec.describe Ticket, type: :model do
             expect(ticket).to be_invalid
         end
 
+        it "has a phone" do
+            expect(ticket).to validate_presence_of(:phone)
+            ticket.phone = nil
+            expect(ticket).to be_invalid
+        end
+
     end
 
     describe "scopes" do
