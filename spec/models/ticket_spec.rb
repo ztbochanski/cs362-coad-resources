@@ -31,6 +31,12 @@ RSpec.describe Ticket, type: :model do
             expect(results).to_not include(closed_ticket)
         end
 
+        it "returns closed tickets from database" do
+            results = Ticket.closed
+            expect(results).to include(closed_ticket)
+            expect(results).to_not include(open_ticket)
+        end
+
     end
 
 end
