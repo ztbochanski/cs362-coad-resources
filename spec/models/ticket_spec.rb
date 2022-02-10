@@ -165,7 +165,13 @@ RSpec.describe Ticket, type: :model do
   end
 
   describe "behaviors" do
-    
+
+    describe "#open?" do
+      it "is open" do
+        ticket.closed { should be(false) }
+      end
+    end
+
   end
 
 end
