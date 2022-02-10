@@ -165,36 +165,7 @@ RSpec.describe Ticket, type: :model do
   end
 
   describe "behaviors" do
-  
-    describe "#approve" do
-      it "is approved" do
-      expect(organization).not_to eq(:approved)
-      expect(organization.approve).to eq(:approved)
-      end
-    end
-
-    describe "#reject" do
-      it "is rejected" do
-      expect(organization.status).not_to eq(:rejected)
-      expect(organization.reject).to eq(:rejected)
-      end
-    end
-
-    describe "#set_default_status" do
-      it "has not status then its default is submitted" do
-      organization.status = ""
-      expect(organization.status).not_to eq(:submitted)
-      expect(organization.set_default_status).to eq(:submitted)
-      end
-    end
-      
-    describe "#to_s" do
-      it "is returns the name" do
-      organization.name = "fake organization"
-      expect(organization.to_s).to eq(organization.name)
-      end
-    end
-  
+    
   end
 
 end
