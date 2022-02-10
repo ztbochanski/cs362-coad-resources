@@ -5,6 +5,7 @@ RSpec.describe Ticket, type: :model do
     let (:region) { create(:region) }
     let (:resource_category) { create(:resource_category) }
     let (:organization) { create(:organization) }
+    let (:ticket) { build(:ticket) }
 
     let (:open_ticket) { Ticket.create!(
         closed: false,
@@ -41,6 +42,16 @@ RSpec.describe Ticket, type: :model do
         region: region,
         resource_category: resource_category,
     )}
+
+    describe "validations" do
+        
+        it "has a name" do
+            expect(ticket).to validate_presence_of(:name)
+            ticket.name = nil
+            expect(ticket).to be_invalid
+        end
+
+    end
 
     describe "scopes" do
         
