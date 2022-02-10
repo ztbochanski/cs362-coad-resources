@@ -106,6 +106,12 @@ RSpec.describe Ticket, type: :model do
 
     end
 
+    describe "associations" do
+        it "belongs to a region" do
+            expect(ticket).to belong_to("region")
+        end
+    end
+
     describe "scopes" do
         
         it "returns open tickets from database" do
