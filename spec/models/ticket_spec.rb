@@ -176,9 +176,16 @@ RSpec.describe Ticket, type: :model do
 
     describe "#captured?" do
       it "is an organization present" do
-        ticket.organization { should be(true) }
+        ticket.captured? { should be(true) }
         ticket.organization = nil
-        ticket.organization { should be(false) }
+        ticket.captured? { should be(false) }
+      end
+    end
+
+    describe "#to_s" do
+      it "returns the id" do
+        expect(ticket.to_s).to eq("Ticket #{ticket.id}")
+        expect(ticket.to_s).to_not eq("Ticket ID")
       end
     end
 
