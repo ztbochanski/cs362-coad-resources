@@ -80,18 +80,21 @@ RSpec.describe Ticket, type: :model do
             end
         end
 
-        # describe "a ticket has a name length" do
-        #     it "has a max length" do
-        #         expect(ticket).to validate_length_of(:name)
-        #     end
-        # end
+        describe "a ticket has a name length" do
+            it "has a max length" do
+                expect(ticket).to be_valid
+                ticket.name = "a" * 256
+                expect(ticket).to_not be_valid
+            end
+        end
 
-        # describe "a ticket has a description length" do
-        #     it "a description has a max length" do
-        #         expect(ticket).to validate_length_of(:description)
-        #     end
-        # end
-
+        describe "a ticket has a description length" do
+            it "a description has a max length" do
+                expect(ticket).to be_valid
+                ticket.description = "a" * 1021
+                expect(ticket).to_not be_valid
+            end
+        end
 
     end
 
