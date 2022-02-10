@@ -169,6 +169,16 @@ RSpec.describe Ticket, type: :model do
     describe "#open?" do
       it "is open" do
         ticket.closed { should be(false) }
+        ticket.closed = true
+        ticket.closed { should be(true) }
+      end
+    end
+
+    describe "#captured?" do
+      it "is an organization present" do
+        ticket.organization { should be(true) }
+        ticket.organization = nil
+        ticket.organization { should be(false) }
       end
     end
 
