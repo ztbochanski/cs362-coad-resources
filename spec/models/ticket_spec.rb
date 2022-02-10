@@ -63,6 +63,12 @@ RSpec.describe Ticket, type: :model do
             expect(ticket).to be_invalid
         end
 
+        it "has a resource category" do
+            expect(ticket).to validate_presence_of(:resource_category_id)
+            ticket.resource_category_id = nil
+            expect(ticket).to be_invalid
+        end
+
     end
 
     describe "scopes" do
