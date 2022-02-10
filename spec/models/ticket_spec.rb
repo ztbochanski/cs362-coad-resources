@@ -109,15 +109,15 @@ RSpec.describe Ticket, type: :model do
     describe "associations" do
         
         it "belongs to a region" do
-            expect(ticket).to belong_to(:region)
+            ticket { should belong_to(:region) }
         end
 
         it "belongs to a resource category" do
-            expect(ticket).to belong_to(:resource_category)
+            ticket { should belong_to(:resource_category) }
         end
 
         it "belongs to an organization" do
-            expect(ticket).to belong_to(:organization)
+            ticket { should belong_to(:organization) }
         end
     end
 
