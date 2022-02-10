@@ -57,6 +57,12 @@ RSpec.describe Ticket, type: :model do
             expect(ticket).to be_invalid
         end
 
+        it "has a region id" do
+            expect(ticket).to validate_presence_of(:region_id)
+            ticket.region_id = nil
+            expect(ticket).to be_invalid
+        end
+
     end
 
     describe "scopes" do
