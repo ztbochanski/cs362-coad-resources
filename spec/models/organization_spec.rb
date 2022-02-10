@@ -93,6 +93,10 @@ RSpec.describe Organization, type: :model do
     it "has many users" do
       expect(organization).to have_many(:users)
     end
+
+    it "has many resource categories" do
+      expect(organization).to have_and_belong_to_many(:resource_categories)
+    end
   end 
 
 end
