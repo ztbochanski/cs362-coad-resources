@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe RegionsController, type: :controller do
   
-  describe "an unauthenticated person accessing a region" do
-    it "redirets to the sign in screen" do
+  describe "an unauthenticated person" do
+    it "redirects to the sig-in screen" do
       get :index
       expect(response).to redirect_to(new_user_session_path)
       get :show, params: {id: "Fake"}
@@ -21,7 +21,7 @@ RSpec.describe RegionsController, type: :controller do
     end
   end
 
-  describe "an authenticated person accessing a region" do
+  describe "an authenticated person" do
     it "redirects to the dashboard" do
       orgranization_user = create(:user)
       orgranization_user.confirm
