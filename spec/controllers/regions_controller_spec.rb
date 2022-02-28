@@ -12,17 +12,17 @@ RSpec.describe RegionsController, type: :controller do
       expect(response).to redirect_to(new_user_session_path)
       post :create
       expect(response).to redirect_to(new_user_session_path)
-      post :edit, params: {id: 'Fake'}
+      post :edit, params: {id: "Fake"}
       expect(response).to redirect_to(new_user_session_path)
-      put :update, params: {id: 'Fake'}
+      put :update, params: {id: "Fake"}
       expect(response).to redirect_to(new_user_session_path)
-      delete :destroy, params: {id: 'Fake'}
+      delete :destroy, params: {id: "Fake"}
       expect(response).to redirect_to(new_user_session_path)
     end
   end
 
   describe "an authenticated person accessing a region" do
-    it "redirects to the sign-in screen" do
+    it "redirects to the dashboard" do
       orgranization_user = create(:user)
       orgranization_user.confirm
       sign_in(orgranization_user)
@@ -34,11 +34,11 @@ RSpec.describe RegionsController, type: :controller do
       expect(response).to redirect_to(dashboard_path)
       post :create
       expect(response).to redirect_to(dashboard_path)
-      post :edit, params: {id: 'Fake'}
+      post :edit, params: {id: "Fake"}
       expect(response).to redirect_to(dashboard_path)
-      put :update, params: {id: 'Fake'}
+      put :update, params: {id: "Fake"}
       expect(response).to redirect_to(dashboard_path)
-      delete :destroy, params: {id: 'Fake'}
+      delete :destroy, params: {id: "Fake"}
       expect(response).to redirect_to(dashboard_path)
     end
   end
