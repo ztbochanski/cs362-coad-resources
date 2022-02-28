@@ -5,6 +5,9 @@ RSpec.describe ResourceCategoriesController, type: :controller do
     it "redirects to the sign-in screen" do
       get :index
       expect(response).to redirect_to(new_user_session_path)
+      get :show, params: { id: "Fake" }
+      expect(response).to redirect_to(new_user_session_path)
+      
     end
   end
 
