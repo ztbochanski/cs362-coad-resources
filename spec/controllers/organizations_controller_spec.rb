@@ -33,9 +33,6 @@ RSpec.describe OrganizationsController, type: :controller do
       orgranization_user.confirm
       sign_in(orgranization_user)
 
-      get :show, params: { id: "Fake" }
-      expect(response).to redirect_to(dashboard_path)
-
       post :approve, params: {id: 'Fake'}
 			expect(response).to redirect_to(dashboard_path)
 
@@ -43,8 +40,6 @@ RSpec.describe OrganizationsController, type: :controller do
 			expect(response).to redirect_to(dashboard_path)
       
     end
-
-
   end
 
 end
