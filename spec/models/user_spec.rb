@@ -36,5 +36,5 @@ RSpec.describe User, type: :model do
       user = User.new(email: nil)
       expect(user).to be_invalid
     end
-
+  end
 end
