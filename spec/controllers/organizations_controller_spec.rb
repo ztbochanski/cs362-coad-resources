@@ -37,7 +37,7 @@ RSpec.describe OrganizationsController, type: :controller do
 			expect(response).to redirect_to(dashboard_path)
 
 			post :reject, params: {id: 'Fake'}
-			expect(response).to redirect_to(dashboard_path
+			expect(response).to redirect_to(dashboard_path)
     end
   end
 
