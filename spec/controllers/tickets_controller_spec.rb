@@ -4,8 +4,8 @@ RSpec.describe TicketsController, type: :controller do
 
   describe "an authenticated user" do
     it "redirects to the dashboard" do
-      orgranization_user = create(:user)
-      orgranization_user.confirm
+      organization_user = create(:user)
+      organization_user.confirm
       sign_in(orgranization_user)
       post :capture, params: { id: "Fake" }
       expect(response).to redirect_to(dashboard_path)

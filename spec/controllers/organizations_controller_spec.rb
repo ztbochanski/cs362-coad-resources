@@ -23,9 +23,9 @@ RSpec.describe OrganizationsController, type: :controller do
 
   describe "a logged in organization user" do
     it "redirects to the dashboard" do 
-      orgranization_user = create(:user)
-      orgranization_user.confirm
-      sign_in(orgranization_user)
+      organization_user = create(:user)
+      organization_user.confirm
+      sign_in(organization_user)
       post :approve, params: {id: "Fake"}
       expect(response).to redirect_to(dashboard_path)
       post :reject, params: {id: "Fake"}
