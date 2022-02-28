@@ -26,9 +26,9 @@ RSpec.describe ResourceCategoriesController, type: :controller do
 
   describe "an authenticated user" do
     it "redirects to the dashboard" do
-      orgranization_user = create(:user)
-      orgranization_user.confirm
-      sign_in(orgranization_user)
+      organization_user = create(:user)
+      organization_user.confirm
+      sign_in(organization_user)
       get :index
       expect(response).to redirect_to(dashboard_path)
       get :show, params: { id: "Fake" }
