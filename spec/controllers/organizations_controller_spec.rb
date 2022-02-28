@@ -21,4 +21,12 @@ RSpec.describe OrganizationsController, type: :controller do
     end
   end
 
+  describe "a logged in organization user" do
+    it "redirects to the dashboard" do 
+      orgranization_user = create(:user)
+      orgranization_user.confirm
+      sign_in(orgranization_user)
+    end
+  end
+
 end
