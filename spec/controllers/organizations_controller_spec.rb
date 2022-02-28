@@ -6,16 +6,22 @@ RSpec.describe OrganizationsController, type: :controller do
     it "redirects to sign in screen" do
       get :index
       expect(response).to redirect_to(new_user_session_path)
+
       get :show, params: {id: 'Fake'}
       expect(response).to redirect_to(new_user_session_path)
+
       get :new
       expect(response).to redirect_to(new_user_session_path)
+
       post :create
       expect(response).to redirect_to(new_user_session_path)
+
       get :edit, params: {id: 'Fake'}
       expect(response).to redirect_to(new_user_session_path)
+
       patch :update, params: {id: 'Fake'}
       expect(response).to redirect_to(new_user_session_path)
+
       put :update, params: {id: 'Fake'}
       expect(response).to redirect_to(new_user_session_path)
     end
@@ -27,11 +33,18 @@ RSpec.describe OrganizationsController, type: :controller do
       orgranization_user.confirm
       sign_in(orgranization_user)
 
-    
       get :show, params: { id: "Fake" }
       expect(response).to redirect_to(dashboard_path)
+
+      post :approve, params: {id: 'Fake'}
+			expect(response).to redirect_to(dashboard_path)
+
+			post :reject, params: {id: 'Fake'}
+			expect(response).to redirect_to(dashboard_path)
       
     end
+
+
   end
 
 end
