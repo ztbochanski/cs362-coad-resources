@@ -26,6 +26,11 @@ RSpec.describe OrganizationsController, type: :controller do
       orgranization_user = create(:user)
       orgranization_user.confirm
       sign_in(orgranization_user)
+
+    
+      get :show, params: { id: "Fake" }
+      expect(response).to redirect_to(dashboard_path)
+      
     end
   end
 
