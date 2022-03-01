@@ -115,7 +115,7 @@ Recaptcha
 
 
 
-&copy; 2020 Lucas Rouchy, Zach Bochanski, Luke Reynolds . All rights reserved.
+&copy; 2022 Lucas Rouchy, Zach Bochanski, Luke Reynolds . All rights reserved.
 
 
 # Steps to get rails to work:
