@@ -6,6 +6,14 @@ RSpec.describe TicketsController, type: :controller do
     it "redirects to the sign-in screen" do
       get :show, params: { id: "Fake" }
       expect(response).to redirect_to(dashboard_path)
+      post :capture, params: { id: "Fake" }
+      expect(response).to redirect_to(dashboard_path)
+      post :release, params: { id: "Fake" }
+      expect(response).to redirect_to(dashboard_path)
+      patch :close, params: { id: "Fake" }
+      expect(response).to redirect_to(dashboard_path)
+      delete :destroy, params: {id: "Fake"}
+      expect(response).to redirect_to(dashboard_path)
     end
   end
 
