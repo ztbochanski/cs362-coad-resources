@@ -1,9 +1,6 @@
 name: RSpec Test
 
-on:
-  push:
-    branches:
-      - master
+on: [push, pull_request]
 
 # Enables a "Run workflow" button on the Actions tab
 # workflow_dispatch:
