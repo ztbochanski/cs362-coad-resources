@@ -1,0 +1,28 @@
+name: RSpec Test
+
+on: [pull_request]
+
+# Enables a "Run workflow" button on the Actions tab
+workflow_dispatch:
+
+jobs:
+  test-app:
+    runs-on: ubuntu-latest
+
+    env:
+      RAILS_ENV: test
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
+          ruby-version: 2.7.8
+
+      - name: Run tests
+        run: |
+          rspec
