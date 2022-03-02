@@ -23,10 +23,7 @@ RSpec.describe RegionsController, type: :controller do
 
   describe "an authenticated person" do
     it "redirects to the dashboard" do
-      
       orgranization_user = create(:user)
-
-
       orgranization_user.confirm
       sign_in(orgranization_user)
       get :index
