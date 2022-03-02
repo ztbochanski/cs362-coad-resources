@@ -7,9 +7,7 @@ on: [push, pull_request]
 
 jobs:
   test-app:
-    matrix:
-      os: [ubuntu-20.04, macos-10.15]
-    runs-on: ${{ matrix.os }}
+    runs-on: [ubuntu-20.04, macos-10.15]
 
     env:
       RAILS_ENV: test
