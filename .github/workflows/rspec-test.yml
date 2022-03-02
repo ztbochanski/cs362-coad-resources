@@ -1,7 +1,7 @@
 name: RSpec Test
 on: [push, pull_request]
 jobs:
-  test:
+  rspec-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
