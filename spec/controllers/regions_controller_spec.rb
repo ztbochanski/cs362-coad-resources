@@ -25,7 +25,7 @@ RSpec.describe RegionsController, type: :controller do
     it "redirects to the dashboard" do
       organization_user = create(:user)
       organization_user.confirm
-      sign_in(orgranization_user)
+      sign_in(organization_user)
       get :index
       expect(response).to redirect_to(dashboard_path)
       get :show, params: {id: "Fake"}
@@ -42,7 +42,5 @@ RSpec.describe RegionsController, type: :controller do
       expect(response).to redirect_to(dashboard_path)
     end
   end
-
-    
 
 end
