@@ -1,5 +1,7 @@
 # Central Oregon COAD
 
+[![RSpec Test](https://github.com/ztbochanski/cs362-coad-resources/actions/workflows/rspec-test.yml/badge.svg)](https://github.com/ztbochanski/cs362-coad-resources/actions/workflows/rspec-test.yml)
+
 This is the GitHub repository for the Central Oregon Community Organizations Active
 in Disaster (COAD) help service system. It connects people in need with resources
 made available by members of Community Organizations Active in Disaster.
@@ -115,7 +117,7 @@ Recaptcha
 
 
 
-&copy; 2020 Lucas Rouchy, Zach Bochanski, Luke Reynolds . All rights reserved.
+&copy; 2022 Lucas Rouchy, Zach Bochanski, Luke Reynolds . All rights reserved.
 
 
 # Steps to get rails to work:
