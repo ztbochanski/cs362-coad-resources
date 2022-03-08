@@ -11,8 +11,7 @@ RSpec.describe ApplicationHelper, type: :helper do
     end
     describe "#full_title" do
       it "returns the default title" do
-        base_title = "Disaster Resource Network"
-        expect(helper.full_title).to eq(base_title)
+        expect(helper.full_title).to eq("Disaster Resource Network")
       end
     end
 end
