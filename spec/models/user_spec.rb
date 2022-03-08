@@ -6,6 +6,7 @@ RSpec.describe User, type: :model do
   describe "attributes" do 
     it "exist" do
       expect(user).to respond_to(:email)
+      
     end
   end
   
@@ -23,5 +24,6 @@ RSpec.describe User, type: :model do
       expect(user).to be_invalid
     end
   end
+ 
 
 end
