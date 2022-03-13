@@ -3,5 +3,11 @@ FactoryBot.define do
     
     email {'fake@user.com'}
     password{ "password"}
+    role { "organization" }
+    organization
+    factory :admin do
+      role {"admin"}
+    end
   end
+
 end
