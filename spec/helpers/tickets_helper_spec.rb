@@ -12,6 +12,10 @@ require 'rails_helper'
 # end
 RSpec.describe TicketsHelper, type: :helper do
 
-    
-
+    describe "#format_phone_number" do
+        it "normalizes the number with US country code" do
+            number = helper.format_phone_number("8314211816")
+            expect(number).to eq("+18314211816")
+        end
+    end
 end
